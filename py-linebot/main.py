@@ -91,6 +91,7 @@ def omikuji(event):
     
 
     '''
+    '''
     from jinja2 import Environment, FileSystemLoader, select_autoescape
     template_env = Environment(
         loader=FileSystemLoader('py-linebot/templates'),
@@ -102,18 +103,20 @@ def omikuji(event):
     template = template_env.get_template('test.json')
     data = template.render(dict(items=les))
     '''
+    '''
 
     select__theme_massage = FlexSendMessage(
             alt_text="テーマ選択",
             contents=BubbleContainer.new_from_json_dict(json.loads(data))
             )
     '''
+    '''
 
     line_bot_api.reply_message(
         event.reply_token,
         res()
     ) 
-
+    '''
     
     '''
     line_bot_api.reply_message(
@@ -123,7 +126,7 @@ def omikuji(event):
     '''
     
 
-    '''
+    
     text=dic()
     #path="https://hackathon-engineer-omikuji.herokuapp.com/static/mikuji/base.jpg"
     #image = Image.open('py-linebot/static/mikuji/base.jpg')
@@ -153,7 +156,7 @@ def omikuji(event):
             )
         ]
     )
-    '''
+    
 
 if (__name__ == "__main__"):
 
